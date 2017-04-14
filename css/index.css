@@ -1,0 +1,335 @@
+html {
+  font-size: 62.5%;
+  font-family: "Microsoft yahei"; }
+
+body, h1, h2, h3, h4, h5, h6, blockquote, ol, ul, dl, dd, p, textarea, input, select, option, form {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: white;
+  -webkit-tap-highlight-color: transparent; }
+
+ol, ul, textarea, input, option, th, td {
+  padding: 0; }
+
+.page {
+  min-width: 320px;
+  max-width: 750px;
+  margin: 0 auto; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 100%; }
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  display: block; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+ul, ol {
+  list-style-type: none; }
+
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden; }
+
+input[type=text], textarea {
+  -webkit-appearance: none; }
+
+input:focus {
+  -webkit-user-modify: read-write-plaintext-only; }
+
+fieldset, img {
+  border: 0; }
+
+a {
+  text-decoration: none; }
+
+a, textarea, input {
+  outline: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+textarea {
+  overflow: auto;
+  resize: none; }
+
+@media only screen and (min-width: 320px) {
+  html {
+    font-size: 75% !important; } }
+@media only screen and (min-width: 375px) {
+  html {
+    font-size: 87.89063% !important; } }
+@media only screen and (min-width: 414px) {
+  html {
+    font-size: 97.03% !important; } }
+@media only screen and (min-width: 480px) {
+  html {
+    font-size: 112.5% !important; } }
+@media only screen and (min-width: 560px) {
+  html {
+    font-size: 131.25% !important; } }
+@media only screen and (min-width: 640px) {
+  html {
+    font-size: 150% !important; } }
+@media only screen and (min-width: 720px) {
+  html {
+    font-size: 168.75% !important; } }
+@media only screen and (min-width: 750px) {
+  html {
+    font-size: 175.78125% !important; } }
+@media only screen and (min-width: 800px) {
+  html {
+    font-size: 187.5% !important; } }
+@media only screen and (min-width: 960px) {
+  html {
+    font-size: 225% !important; } }
+#base header {
+  display: none; }
+
+button {
+  outline: none; }
+
+#search {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  font-size: 0.71111rem;
+  z-index: 100;
+  color: #676767; }
+  #search .location_error {
+    width: 100%;
+    text-align: center;
+    color: white;
+    height: 1.77778rem;
+    line-height: 1.77778rem;
+    background: #3d94fd;
+    font-size: 0.66667rem;
+    display: none; }
+  #search .location_no {
+    width: 100%;
+    text-align: center;
+    color: white;
+    height: 1.77778rem;
+    line-height: 1.77778rem;
+    background: #3d94fd;
+    font-size: 0.66667rem;
+    display: none; }
+  #search .nav {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    border: none; }
+  #search .weui-navbar {
+    display: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.22222rem 2.22222rem 0.33333rem 7.55556rem;
+    position: static;
+    background: transparent;
+    color: #797676;
+    font-size: 0.97778rem; }
+    #search .weui-navbar .weui-navbar__item:after {
+      border: none; }
+    #search .weui-navbar .weui-navbar__item {
+      padding: 0 0.33333rem;
+      flex: none;
+      -webkit-flex: none;
+      font-size: 0.97778rem;
+      border: none; }
+    #search .weui-navbar .weui-navbar__item.weui-bar__item_on {
+      color: #157efb;
+      background: transparent; }
+    #search .weui-navbar span {
+      position: absolute;
+      right: 5.11111rem;
+      display: none; }
+  #search form {
+    width: 96%;
+    height: 2.22222rem;
+    line-height: 2.22222rem;
+    margin: 0.44444rem auto;
+    padding-bottom: 0.44444rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: flex;
+    font-size: 0.71111rem; }
+    #search form select {
+      color: white;
+      width: auto;
+      display: inline-block;
+      direction: rtl;
+      outline: none;
+      padding-right: 0.95556rem;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      border: none;
+      width: auto;
+      box-sizing: border-box;
+      font-size: 0.93333rem;
+      background: url(../img/sanjiao.png) transparent right center no-repeat;
+      background-size: 0.71111rem;
+      margin-right: 0.22222rem; }
+      #search form select option {
+        direction: ltr; }
+    #search form p {
+      background: white;
+      width: 70%;
+      height: 1.86667rem;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-color: #a5a3a3; }
+      #search form p input {
+        float: left;
+        background: transparent;
+        height: 1.86667rem;
+        width: 15.55556rem;
+        border: none;
+        border-radius: 10px 0  0 10px;
+        -webkit-border-radius: 10px 0  0 10px;
+        -moz-border-radius: 10px 0  0 10px;
+        text-indent: 0.66667rem;
+        font-size: 0.88889rem; }
+      #search form p button {
+        float: right;
+        width: 2.06667rem;
+        height: 100%;
+        background: url(../img/search.png) #d6d5d5 center no-repeat;
+        background-size: 1.26667rem 1.26667rem;
+        border: none;
+        border-radius: 0 4px 4px 0; }
+      #search form p button:hover {
+        background: url(../img/search.png) #20a1f9 center no-repeat;
+        background-size: 1.26667rem 1.26667rem; }
+
+.swiper_img {
+  height: 11.77778rem;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-bottom: 0.44444rem; }
+  .swiper_img .swiper-pagination-bullet {
+    background: white;
+    opacity: 1; }
+  .swiper_img .swiper-pagination-bullet-active {
+    background: #157efb; }
+  .swiper_img img {
+    display: block;
+    width: 100%;
+    height: 100%; }
+
+section {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 11.77778rem;
+  overflow: hidden;
+  box-sizing: border-box;
+  overflow: scroll;
+  height: auto;
+  background: white;
+  font-size: 0.88889rem;
+  color: #797676; }
+  section h2 {
+    background: white;
+    width: 100%;
+    height: 3.2rem; }
+    section h2 img {
+      display: block;
+      width: 100%;
+      height: 100%; }
+  section .swiper-container {
+    margin: 0 auto;
+    width: 95%;
+    box-sizing: border-box;
+    position: relative;
+    box-sizing: border-box;
+    text-align: center; }
+    section .swiper-container .swiper-slide {
+      line-height: 1.77778rem; }
+      section .swiper-container .swiper-slide img {
+        display: none;
+        width: 90%;
+        height: auto;
+        margin: auto;
+        margin-top: 0.66667rem; }
+      section .swiper-container .swiper-slide p {
+        font-family: "PingFang-Medium,PingFangSC-Regular,Helvetica,Droid Sans,Arial,sans-serif";
+        color: #000;
+        margin: auto;
+        width: 80%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+    section .swiper-container .swiper-button-prev {
+      width: 1.11111rem;
+      height: 1.88889rem;
+      background: url(../img/left.png) 0 top no-repeat;
+      background-size: 1.11111rem 1.88889rem;
+      margin-left: -7px; }
+    section .swiper-container .swiper-button-next {
+      width: 1.11111rem;
+      height: 1.88889rem;
+      background: url(../img/right.png) 0 top no-repeat;
+      background-size: 1.11111rem 1.88889rem;
+      margin-right: -7px; }
+  section .swiper3 {
+    height: auto;
+    margin-bottom: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0; }
+    section .swiper3 .swiper-slide {
+      width: 100%;
+      padding: 0 1.77778rem;
+      box-sizing: border-box;
+      position: relative; }
+      section .swiper3 .swiper-slide img {
+        width: 100%; }
+      section .swiper3 .swiper-slide a {
+        display: block;
+        float: left;
+        box-sizing: border-box;
+        border-right: 1px solid #FAFAFA;
+        border-bottom: 1px solid #FAFAFA; }
+        section .swiper3 .swiper-slide a p {
+          width: 6.66667rem;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis; }
+      section .swiper3 .swiper-slide span {
+        position: absolute;
+        width: 1.55556rem;
+        height: 1.55556rem;
+        top: -5px;
+        left: 10px; }
+        section .swiper3 .swiper-slide span img {
+          width: 100%;
+          height: 100%; }
+
+/*# sourceMappingURL=index.css.map */

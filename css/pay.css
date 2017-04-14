@@ -1,0 +1,216 @@
+html {
+  font-size: 62.5%;
+  font-family: "Microsoft yahei"; }
+
+body, h1, h2, h3, h4, h5, h6, blockquote, ol, ul, dl, dd, p, textarea, input, select, option, form {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: white;
+  -webkit-tap-highlight-color: transparent; }
+
+ol, ul, textarea, input, option, th, td {
+  padding: 0; }
+
+.page {
+  min-width: 320px;
+  max-width: 750px;
+  margin: 0 auto; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 100%; }
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  display: block; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+ul, ol {
+  list-style-type: none; }
+
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden; }
+
+input[type=text], textarea {
+  -webkit-appearance: none; }
+
+input:focus {
+  -webkit-user-modify: read-write-plaintext-only; }
+
+fieldset, img {
+  border: 0; }
+
+a {
+  text-decoration: none; }
+
+a, textarea, input {
+  outline: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+textarea {
+  overflow: auto;
+  resize: none; }
+
+@media only screen and (min-width: 320px) {
+  html {
+    font-size: 75% !important; } }
+@media only screen and (min-width: 375px) {
+  html {
+    font-size: 87.89063% !important; } }
+@media only screen and (min-width: 414px) {
+  html {
+    font-size: 97.03% !important; } }
+@media only screen and (min-width: 480px) {
+  html {
+    font-size: 112.5% !important; } }
+@media only screen and (min-width: 560px) {
+  html {
+    font-size: 131.25% !important; } }
+@media only screen and (min-width: 640px) {
+  html {
+    font-size: 150% !important; } }
+@media only screen and (min-width: 720px) {
+  html {
+    font-size: 168.75% !important; } }
+@media only screen and (min-width: 750px) {
+  html {
+    font-size: 175.78125% !important; } }
+@media only screen and (min-width: 800px) {
+  html {
+    font-size: 187.5% !important; } }
+@media only screen and (min-width: 960px) {
+  html {
+    font-size: 225% !important; } }
+body, html {
+  background: white;
+  font-family: "microsoft yahei"; }
+
+#pay_section {
+  width: 100%;
+  height: auto;
+  font-size: 0.97778rem;
+  font-size: 1.06667rem; }
+  #pay_section h2 {
+    width: 100%;
+    text-align: center;
+    height: 3.33333rem;
+    line-height: 3.33333rem; }
+  #pay_section ul.money {
+    background: #efefef; }
+    #pay_section ul.money li {
+      padding-left: 1.77778rem;
+      line-height: 3.11111rem;
+      border-bottom: 1px solid #bfbfbf; }
+      #pay_section ul.money li span {
+        margin-left: 0.66667rem;
+        color: #e41d22; }
+  #pay_section ol {
+    width: 100%;
+    height: 8.88889rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-content: space-between;
+    margin-bottom: 3.11111rem;
+    padding: 1.77778rem 5% 0; }
+    #pay_section ol li {
+      width: 29%;
+      height: 2.97778rem;
+      text-align: center;
+      line-height: 2.97778rem;
+      border: 1px solid #bfbfbf;
+      border-radius: 5px; }
+      #pay_section ol li input {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        border: none;
+        float: left;
+        border-radius: 8px;
+        font-size: 1.15556rem;
+        color: #333333; }
+    #pay_section ol li.active {
+      border-color: #1fa1f9; }
+  #pay_section p.pay {
+    width: 22.06667rem;
+    height: 2.97778rem;
+    box-sizing: border-box;
+    margin: 1.11111rem auto;
+    border: 1px solid #bfbfbf;
+    text-align: center;
+    line-height: 2.97778rem;
+    border-radius: 5px; }
+    #pay_section p.pay span {
+      color: #e41d22; }
+  #pay_section button {
+    display: block;
+    width: 22.06667rem;
+    height: 2.97778rem;
+    box-sizing: border-box;
+    margin: 1.11111rem auto;
+    border: 1px solid #bfbfbf;
+    text-align: center;
+    line-height: 2.97778rem;
+    border-radius: 5px;
+    font-size: 0.97778rem;
+    background: #f2f2f2; }
+  #pay_section button.active {
+    color: white;
+    background: #1fa1f9; }
+  #pay_section ul.payList, #pay_section ul.carryList {
+    font-size: 0.97778rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    line-height: 2.93333rem;
+    background: #efefef;
+    text-align: center;
+    display: none; }
+    #pay_section ul.payList li, #pay_section ul.carryList li {
+      border-bottom: 1px solid rgba(31, 31, 31, 0.2); }
+    #pay_section ul.payList li:nth-last-of-type(1), #pay_section ul.carryList li:nth-last-of-type(1) {
+      border: none; }
+
+.weui-tabbar {
+  display: none; }
+
+p.moneyerror, p.over {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 65%;
+  height: 2.66667rem;
+  text-align: center;
+  line-height: 2.66667rem;
+  background: rgba(49, 49, 49, 0.5);
+  color: white;
+  border-radius: 5px;
+  display: none; }
+
+/*# sourceMappingURL=pay.css.map */

@@ -1,0 +1,286 @@
+html {
+  font-size: 62.5%;
+  font-family: "Microsoft yahei"; }
+
+body, h1, h2, h3, h4, h5, h6, blockquote, ol, ul, dl, dd, p, textarea, input, select, option, form {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: white;
+  -webkit-tap-highlight-color: transparent; }
+
+ol, ul, textarea, input, option, th, td {
+  padding: 0; }
+
+.page {
+  min-width: 320px;
+  max-width: 750px;
+  margin: 0 auto; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 100%; }
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  display: block; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+ul, ol {
+  list-style-type: none; }
+
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden; }
+
+input[type=text], textarea {
+  -webkit-appearance: none; }
+
+input:focus {
+  -webkit-user-modify: read-write-plaintext-only; }
+
+fieldset, img {
+  border: 0; }
+
+a {
+  text-decoration: none; }
+
+a, textarea, input {
+  outline: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+textarea {
+  overflow: auto;
+  resize: none; }
+
+@media only screen and (min-width: 320px) {
+  html {
+    font-size: 75% !important; } }
+@media only screen and (min-width: 375px) {
+  html {
+    font-size: 87.89063% !important; } }
+@media only screen and (min-width: 414px) {
+  html {
+    font-size: 97.03% !important; } }
+@media only screen and (min-width: 480px) {
+  html {
+    font-size: 112.5% !important; } }
+@media only screen and (min-width: 560px) {
+  html {
+    font-size: 131.25% !important; } }
+@media only screen and (min-width: 640px) {
+  html {
+    font-size: 150% !important; } }
+@media only screen and (min-width: 720px) {
+  html {
+    font-size: 168.75% !important; } }
+@media only screen and (min-width: 750px) {
+  html {
+    font-size: 175.78125% !important; } }
+@media only screen and (min-width: 800px) {
+  html {
+    font-size: 187.5% !important; } }
+@media only screen and (min-width: 960px) {
+  html {
+    font-size: 225% !important; } }
+header {
+  height: 2rem;
+  width: 100%;
+  text-align: center;
+  line-height: 2rem;
+  background: #1c1b20;
+  color: #a8a8aa;
+  font-size: 0.97778rem; }
+
+.swiper-container {
+  overflow: hidden;
+  width: 100%;
+  height: auto; }
+  .swiper-container .swiper-pagination-bullets {
+    bottom: 5px; }
+  .swiper-container .swiper-pagination-bullet {
+    background: #e3e1e1;
+    width: 0.88889rem;
+    height: 0.88889rem;
+    opacity: 1; }
+  .swiper-container .swiper-pagination-bullet-active {
+    background: #3d94fd; }
+  .swiper-container .swiper-slide {
+    width: 100%;
+    height: auto; }
+    .swiper-container .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: auto; }
+
+.search {
+  clear: both;
+  height: 3.11111rem;
+  line-height: 3.11111rem;
+  box-sizing: border-box;
+  padding: 0 5% 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center; }
+  .search p {
+    line-height: 2.77778rem;
+    color: #333333;
+    width: auto;
+    display: inline-block;
+    direction: rtl;
+    outline: none;
+    padding-right: 1.11111rem;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    width: auto;
+    box-sizing: border-box;
+    font-size: 1.02222rem;
+    background: url(../img/down.png) transparent 95% 45% no-repeat;
+    background-size: 0.71111rem;
+    width: 28%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .search form {
+    margin: 1% 0 0;
+    width: 80%;
+    height: 75%;
+    border: 1px solid rgba(169, 168, 168, 0.3);
+    border-radius: 5px; }
+    .search form input {
+      text-indent: 2%;
+      float: left;
+      height: 100%;
+      width: 85%;
+      border: none;
+      border-radius: 5px 0 0 5px;
+      font-size: 0.97778rem; }
+    .search form button {
+      float: left;
+      border: none;
+      width: 15%;
+      height: 100%;
+      border-radius: 0 5px 5px 0;
+      background: url(../img/search.png) #d6d5d5 center no-repeat;
+      background-size: 50% auto; }
+
+.list {
+  width: 100%;
+  height: auto;
+  background: #f8f8f8;
+  box-sizing: border-box;
+  padding: 5%; }
+  .list li {
+    border: 1px solid #bfbfbf;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #333333;
+    box-shadow: 0 0 5px #d6d6d6;
+    margin-bottom: 5%; }
+    .list li h2 {
+      border-bottom: 1px solid rgba(191, 191, 191, 0.5);
+      padding: 2% 5%;
+      font-size: 1.02222rem; }
+    .list li p {
+      padding: 0.2% 10%;
+      font-size: 0.97778rem; }
+    .list li p:nth-of-type(1) {
+      background: url(../img/tel.png) 3.5% center no-repeat;
+      background-size: 5% auto; }
+    .list li p:nth-of-type(2) {
+      background: url(../img/location.png) 3.5% 6% no-repeat;
+      background-size: 5% auto;
+      padding-bottom: 1.5%; }
+
+.changecity {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%; }
+  .changecity header {
+    width: 100%;
+    height: 3.11111rem;
+    line-height: 3.11111rem;
+    text-align: center;
+    background: #f8f8f8;
+    color: #333333;
+    font-size: 1.02222rem; }
+    .changecity header a {
+      position: absolute;
+      left: 5%;
+      top: 0%;
+      width: 10%;
+      height: 3.11111rem;
+      font-size: 2.44444rem;
+      color: #3d94fd; }
+    .changecity header span {
+      color: #20a1f9; }
+  .changecity .city {
+    width: 100%;
+    height: auto;
+    background: white;
+    box-sizing: border-box;
+    padding: 5%  4%;
+    overflow: hidden; }
+    .changecity .city li {
+      border: 1px solid #c5c4c4;
+      border-radius: 5px;
+      width: 23%;
+      text-align: center;
+      float: left;
+      margin-right: 1%;
+      font-size: 0.97778rem;
+      padding: 1% 0;
+      margin-bottom: 3%; }
+    .changecity .city li.active {
+      border-color: #b3dffd; }
+    .changecity .city li:nth-of-type(4n) {
+      margin-right: 0; }
+
+.changecity.active {
+  display: block;
+  z-index: 100;
+  animation: move .5s; }
+
+@keyframes move {
+  from {
+    top: 100%; }
+  to {
+    top: 0; } }
+p.noshop {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 2.66667rem;
+  width: 70%;
+  background: rgba(90, 90, 90, 0.8);
+  color: white;
+  text-align: center;
+  line-height: 2.66667rem;
+  border-radius: 5px;
+  display: none; }
+
+/*# sourceMappingURL=shopquery.css.map */
