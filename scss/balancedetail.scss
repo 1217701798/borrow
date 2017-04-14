@@ -1,0 +1,98 @@
+@import "mobile";
+body{
+     ;
+}
+header{
+    width:100%;
+    height:pxToRem(150);
+    line-height:pxToRem(150);
+    text-align:center;
+    color:#050505;
+    background:white;
+    border-bottom:1px solid #cccccc;
+}
+.list{
+    width:100%;
+    background:white;
+    height:auto;
+    box-sizing:border-box;
+    li{
+        padding:4% 1% 3% 22%;
+        border-bottom:1px solid #cccccc;
+        display:flex;
+        justify-content: space-between;
+        color:#43434;
+        div:nth-of-type(1){
+            width:70%;
+            line-height:150%; 
+            h3{
+                font-size:pxToRem(50);
+            };              
+            p{
+                 font-size:pxToRem(46);
+                 color:#989898;
+                  line-height:180%; 
+            }
+        }
+        div:nth-of-type(2){
+            text-align:center;
+            width:30%;
+            line-height:300%;
+            color:#3d94fd;            
+        }
+        .del{
+              color:#fe3434!important;
+            }
+    }
+    li.cold{
+        background:url(../img/cold.png) 5% center no-repeat;
+        background-size:12% auto;
+        div:nth-of-type(2){      
+            color:#666666;
+        }
+    }
+    li.thaw{
+        background:url(../img/thaw.png) 5% center no-repeat;
+        background-size:13% auto;
+    }
+    li.dream{
+        background:url(../img/dream.png) 5% center no-repeat;
+        background-size:12% auto;
+    }
+    li.we{
+        background:url(../img/we.png) 5% center no-repeat;
+        background-size:11.25% auto;
+    }
+    li.debit{
+         background:url(../img/dream.png) 5% center no-repeat;
+        background-size:12% auto;
+        div:nth-of-type(2){
+            color:#fe3434
+        }
+    }
+}
+//ul{display:none;}
+.nodata{
+    width:100%;
+    height:auto;
+    padding:25% 0;
+
+       display:none;
+    img{
+        display:block;
+        width:60%;
+        height:auto;
+        margin:0 auto 5%;
+    }
+    p{
+        line-height:800%;
+        text-align:center;
+    }
+}
+.loading,.over{
+    text-align:center;
+    line-height:pxToRem(150);
+    color:#50505;
+    background:white;
+}
+.over{display:none;}

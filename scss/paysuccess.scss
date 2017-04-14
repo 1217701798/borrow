@@ -1,0 +1,32 @@
+@import "mobile";
+div.box{
+    width:100%;
+    height:auto;
+    overflow:hidden;
+    text-align:center;
+    color:#333;
+    font-size:pxToRem(50);
+    img{
+        display:block;
+        width:70%;
+        height:auto;
+        margin:15% auto 1%;
+    }
+    p{line-height:pxToRem(150);}
+    p:nth-last-of-type(1){
+        font-size:pxToRem(42);
+        color:#20a1f9;
+    }
+    a{
+        display:block;
+        width:80%;
+        padding:3% 0;
+        margin:auto;
+        border-radius:5px;
+        background:#20a1f9;
+        color:white;
+        margin-top:10%;
+    }
+    a.borrow{}
+    a.open{}
+}

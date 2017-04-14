@@ -1,0 +1,33 @@
+@import "mobile";
+.weui-tabbar{
+    display:none;
+}
+body,html{
+    background:white;
+}
+#success_section{
+    margin-top:pxToRem(132);
+    padding-top:pxToRem(450);
+    text-align:center;
+    line-height:pxToRem(150);
+    font-size:pxToRem(58);
+    color:#333333;  
+    a{
+        display:inline-block;
+        margin:auto;
+        border:none;
+        background:#ff0000;
+        color:white;
+font-size:pxToRem(48);
+        
+        padding:0 pxToRem(60);
+        border-radius:8px;
+
+    }
+    .time{
+        font-size:pxToRem(48);
+        span{
+            color:#ff0000;
+        }
+    }
+}

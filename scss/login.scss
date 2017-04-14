@@ -1,0 +1,103 @@
+@import "mobile";
+html,body{
+    background:white
+}
+#login_section{
+    width:100%;
+    height:auto;
+    overflow:hidden;
+    .pic{
+        width:pxToRem(230);
+        height:pxToRem(230);
+        border-radius:50%;
+        background:url(../img/tx.png) center no-repeat;
+        background-size:100%;
+        margin:pxToRem(70) auto;
+    }
+    span{
+        padding:pxToRem(45) pxToRem(0) pxToRem(45) pxToRem(20);
+    }
+    input{
+        border:none;
+        height:pxToRem(100);
+        background:transparent;
+        width:pxToRem(560);
+        margin-left:pxToRem(10);        
+        width:100%;
+        height:pxToRem(170);
+        border:1px solid #dbdce1;
+        border-left:none;
+        border-right:none;
+        text-indent:pxToRem(220);
+        font-size:110%;
+    }
+    li:nth-of-type(1) {
+        input{
+            border-bottom:none;
+            background:url(../img/my.png) white  pxToRem(60) center no-repeat;
+            background-size:pxToRem(78);
+        }        
+    }
+    input[type=password]{
+        background:url(../img/clock.png) white  pxToRem(60) center no-repeat;        
+        background-size:pxToRem(77) pxToRem(71);
+    }
+    li:nth-of-type(3){
+        position:relative;
+         input{
+              border-top:none;
+               border-bottom:1px solid #dbdce1;              
+         }    
+         span{
+               position:absolute;
+               top:0;
+               left:pxToRem(20);
+          }
+          img{
+              position:absolute;
+              top:pxToRem(20);
+              right:pxToRem(20);;
+              width:pxToRem(300);
+              height:pxToRem(140);
+          } 
+    }
+    p{
+        width:100%;
+        box-sizing:border-box;
+        padding:0 pxToRem(40);
+        display:-webkit-box;
+        display:-webkit-flex;
+        display:-ms-flexbox;
+        display:flex;
+        justify-content:space-between;
+        
+        flex-wrap:wrap;
+        a{
+            line-height:pxToRem(180);
+            font-size:pxToRem(46);
+        }
+       
+        button{
+        height:pxToRem(165);
+        width:70%;
+        margin:auto;
+        border:none;
+        background:#36aaf5;
+        color:white;
+        font-size:pxToRem(58);
+        border-radius:15px;
+    }
+    }
+    ol{
+        width:100%;
+        text-align:center;
+        margin-top:pxToRem(230);
+        li{
+           line-height:pxToRem(130);
+        }
+    }
+    
+}
+.weui-tabbar{
+    display: none;
+}
