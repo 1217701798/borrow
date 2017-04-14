@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/example.css"/>
+		<link rel="stylesheet" href="css/swiper-3.4.0.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="icon/iconfont.css" />
+		<!--新引入样式-->
+		<link rel="stylesheet" href="css/register.css" />
+		<script>
+			var _hmt = _hmt || [];
+				(function() {
+				  var hm = document.createElement("script");
+				  hm.src = "https://hm.baidu.com/hm.js?f97686593414f3bb49a24f748c29e714";
+				  var s = document.getElementsByTagName("script")[0]; 
+				  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+	</head>
+	<body>	
+		<!--header-->
+		<div id="base"></div>
+		<div id="register_section">
+			<p>手机号注册</p>
+			<div class="register_main">
+				<span>手机号</span><input type="text" placeholder="+86"/><b >您的手机号有误</b><br /><hr />		
+				<span>验证码</span><input type="text" /><img src="img/code.png" alt="" class="code" /><hr />
+				<span>手机验证码</span><input type="text" /><button class="code">获取手机验证码 </button><hr />
+				<div>注册代表您已阅读并同意<a href="">筑梦书屋用户协议</a></div>
+				<i>登录后可享受更多优质服务</i>
+			</div>
+			
+		</div>	
+		<a class="next" href="register1.html">下一步</a>
+		<!--footer-->
+
+        
+	
+	<script src="js/zepto.min.js"></script>
+	<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/weui.min.js"></script>
+	<script src="js/swiper-3.4.0.min.js"></script>
+	<script type="text/javascript">
+		$("#base").load("base.html",function(){
+			
+		})
+	
+	    //底部切换
+	    $(function(){
+	        $('.weui-tabbar__item').on('click', function () {
+	            $(this).addClass('weui-bar__item_on').siblings('.weui-bar__item_on').removeClass('weui-bar__item_on');
+	        });
+	    });    	
+    	//滚动    	
+    	$(window).scroll(function(){
+//  		console.log($(window).scrollTop())
+    		if($(window).scrollTop()>0){
+//  			alert(2)
+    			$(".select_nav").css({"position":"fixed","z-index":"100","background":"rgba(227,227,225,0.9)"})
+    		}else{
+    			$(".select_nav").css({"position":"relative"})
+    			
+    		}
+    	})
+    	//返回顶部
+    	$(window).scroll(function(){
+    		if($(window).scrollTop()>200){
+    			$(".gotop").show()
+    			$(".gotop").on("click",function(){
+    				$(window).scrollTop(0)
+    			})
+    		}else{
+    			$(".gotop").hide()   			
+    		}
+    	})
+    	$("#select_section").find("a").on("click",function(){
+    		$(this).addClass("active").parents("li").siblings().find("a").removeClass("active")
+    	})
+    	//手机号验证
+    	$("input[type=text]:nth-of-type(1)").on("blur",function(){
+
+    			var res = /^1[3|5|7|9]\d{9}$/;
+	    		var tel = $("input[type=text]:nth-of-type(1)").val();
+		    	if(!res.test(tel)){
+	    			$(this).next("b").show()
+	    		}else{
+	    			//验证码
+	    			$(".code").on("click",function(){
+    				var num = 60;
+    				var that = this
+    				var timer = setInterval(function(){
+	    			$(that).text(num+"秒")
+	    			$(that).css({"border":"1px solid #cdcdcd","color":"#cdcdcd"})
+	    			num--;
+	    			if(num<0){
+	    			$(that).text("重新发送")
+	    			clearInterval(timer)	
+    			}
+    		},1000)
+    		})
+	    		}
+    	})
+    	
+    	
+    	
+    	
+    	
+	</script>
+	</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="format-detection" content="telephone=no"/>
+		<link rel="stylesheet" href="css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/example.css"/>
+		<link rel="stylesheet" href="css/swiper-3.4.0.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="icon/iconfont.css" />
+		<!--新引入样式-->
+		<link rel="stylesheet" href="css/my.css" />
+		<script>
+			var _hmt = _hmt || [];
+				(function() {
+				  var hm = document.createElement("script");
+				  hm.src = "https://hm.baidu.com/hm.js?f97686593414f3bb49a24f748c29e714";
+				  var s = document.getElementsByTagName("script")[0]; 
+				  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+	</head>
+	<body>	
+		<!--header-->
+		<div id="base"></div>
+		<!--section-->
+		<div id="my_section">
+			<div class="my_header">
+				<div class="pic"><img src="img/tx.png" alt="" /></div>
+				<a href="login.html">登录</a>
+				<a href="register.html" >注册</a>
+				<!--登录成功之后以上两个a标签隐藏,下面两个p标签显示-->
+				<p>姓名</p>
+				<p>187123342342</p>
+				<!--登陆后显示下面的二维码-->
+				<img src="img/er1.png" alt="" class="code_img" />
+				
+			</div>
+			<h2><i class="iconfont">&#xe61f;</i>我的书屋</h2>
+			<ul>
+				<li><a href="my_preborrow.html">我的预借</a></li>
+				<li><a href="now_preborrow.html">当前借阅</a></li>
+				<li><a href="history_preborrow.html">历史借阅</a></li>
+				<li><a href="collect.html">我的收藏</a></li>
+			</ul>
+			<h2><i class="iconfont">&#xe600;</i>我的账户</h2>
+			<ul>
+				<li><a href="mybalance.html">我的账户</a></li>
+				<li><a href="pay.html">余额/充值</a></li>
+				<li><a href="">积分</a></li>
+				<li><a href="">优惠券</a></li>				
+			</ul>
+			<h2><i class="iconfont">&#xe60f;</i>个人设置</h2>
+			<ul>
+				<li><a href="">会员中心</a></li>
+				<li><a href="">会员等级</a></li>
+				<li><a href="">退出登录</a></li>	
+			</ul>
+		</div>		
+		<!--footer-->
+		<div style="height:60px;width:100%"></div>
+        <!--新增二维码弹窗-->
+        <div class="code_container">
+        	<div class="my_code">
+	        	<img src="img/tx1.png" alt="" class="img" />
+	        	<p>姓名</p>
+	        	<p>15971773232</p>
+	        	<span>出示下方条形码 领取我预借的图书</span>
+	        	<div class="ercode"><img src="img/er.png" alt="" /></div>
+	        	<!--二维码-->
+        		<p class="number">1612838097737</p>
+        	</div>
+        </div>
+        
+	
+	<script src="js/zepto.min.js"></script>
+	<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/weui.min.js"></script>
+	<script src="js/swiper-3.4.0.min.js"></script>
+	<script>
+		//加载公共头尾
+		$("#base").load("base.html",function(){
+			$(this).find("a").eq(3).addClass("weui-bar__item_on").siblings().removeClass("weui-bar__item_on")
+			
+		})
+	//点击切换头像
+	$(".pic").click(function(){
+		window.location = "changepic.html"
+	})
+   //点击显示二维码界面
+	$(".code_img").click(function(){
+   		$(".code_container").show();
+   		$(".code_container").click(function(){
+   			$(this).hide()
+   		})
+   		$(".my_code").click(function(e){
+   			e.stopPropagation()
+   			$(".code_container").show()
+   		})
+  });
+  //判断二维码的长度
+   (function(){
+	   var num1 = $(".number").text().substring(0,10);
+	   num1  = num1.replace(/(\d{4})(?=\d)/g,"$1 \  ")
+	   console.log(num1)
+	   var num2 = $(".number").text().substring(10);
+   		$(".number").text(num1+num2);
+   })()
+  
+
+   
+   
+	   	 
+    	
+  
+  
+    	
+	</script>
+</body>
+</html>

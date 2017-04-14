@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>充值成功页面</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/example.css"/>
+		<link rel="stylesheet" href="css/swiper-3.4.0.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="icon/iconfont.css" />
+		<!--新引入样式-->
+		<link rel="stylesheet" href="css/paysuccess.css" />
+		<script>
+			var _hmt = _hmt || [];
+				(function() {
+				  var hm = document.createElement("script");
+				  hm.src = "https://hm.baidu.com/hm.js?f97686593414f3bb49a24f748c29e714";
+				  var s = document.getElementsByTagName("script")[0]; 
+				  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+	</head>
+	<body>	
+		<!--header-->
+		<div id="base"></div>
+		<!--中间部分-->
+		<div class="box">
+			<img src="img/paysuccess.png"/>
+			<p>恭喜您充值成功~</p>
+			<p>您当前的账户余额为: <span>200</span>元</p>
+			<!--未开通显示以下p标签-->
+			<p>快去开通借阅服务，开通后免费借书哦~</p>
+			<!--已开通显示以下按钮-->
+			<a  class="borrow">去预借图书</a>
+			<!--未开通显示以下按钮-->
+			<a javascript:void(0) class="open">开通预借</a>			
+		</div>
+		
+	
+	<script src="js/zepto.min.js"></script>
+	<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/weui.min.js"></script>
+	<script src="js/swiper-3.4.0.min.js"></script>
+	<script>
+	//加载公共头尾
+	$("#base").load("base.html",function(){
+		$(this).find("a").eq(3).addClass("weui-bar__item_on").siblings().removeClass("weui-bar__item_on")
+	})
+	</script>
+	</body>
+</html>

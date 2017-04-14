@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="css/weui.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/example.css"/>
+    <link rel="stylesheet" href="css/swiper-3.4.0.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" href="css/iconfont.css" />
+    <link rel="stylesheet" href="icon/iconfont.css" />
+    <!--新引入样式-->
+    <link rel="stylesheet" href="css/pay.css" />
+    <script>
+      var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?f97686593414f3bb49a24f748c29e714";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  </head>
+  <body>  
+    <!--header-->
+    <div id="base"></div>
+    <!--section-->
+    <div id="pay_section">
+      <h2>选择充值金额</h2>
+      <ol>
+          <li>15元</li>
+          <li>30元</li>
+          <li>50元</li>
+          <li class="active">100元</li>
+          <li>200元</li>
+          <li><input type="tel" placeholder="其他金额"/></li>        
+      </ol>
+      <p class="pay">充值金额：<span>100</span></p>
+      <button id="pay" class="active">确定充值</button>
+      <ul class="payList">
+        <li>微信支付</li>
+        <li>找人支付</li>
+        <li>信用卡支付</li>
+        <li>储蓄卡支付</li>
+      </ul>
+      <ul class="carryList">
+        <li>微信钱包</li>
+        <li>储蓄卡</li>
+      </ul>
+    </div>
+    <!--金额有误提示-->
+    <p class="moneyerror">输入金额有误</p>
+    <!--金额不能超过10000提示-->
+    <p class="over">充值金额不能超过10000</p>
+  <script src="js/zepto.min.js"></script>
+  <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+  <script src="js/weui.min.js"></script>
+  <script src="js/swiper-3.4.0.min.js"></script>
+  <script>
+    
+  //选中金额
+  $("#pay_section li").on("click",function(){
+    $(this).addClass("active").siblings().removeClass("active");
+    if($("#pay_section li input:focus").length==1){
+      $(this).find("input").attr("placeholder","");
+      $(".pay span").html("")
+      $(this).find("input").on("keyup",function(){
+        if(this.value.length==1){
+          this.value=this.value.replace(/[^1-9]/g,'')}
+        else{this.value=this.value.replace(/\D/g,'')}
+        $(".pay span").html($(this).val()+"元")
+      })
+      $(this).find("input").on("afterpaste",function(){
+        if(this.value.length==1){
+          this.value=this.value.replace(/[^1-9]/g,'')}
+        else{this.value=this.value.replace(/\D/g,'')}
+        $(".pay span").html($(this).val()+"元")
+      })
+    }else{
+      $("#pay_section li input").attr("placeholder","其他金额")
+      $(".pay span").html($(this).html())
+    }
+  })
+  //确认充值
+  var time = null;
+  $("button#pay").on("click",function(){
+    clearInterval(time)
+    if(parseInt($(".pay span").html())>10000){//不能超过10000
+      $("p.over").fadeIn();
+      time = setInterval(function(){
+        $("p.over").fadeOut();
+      },2000)
+    }else if(!parseInt($(".pay span").html())){//不能为空
+    	$("p.moneyerror").fadeIn();
+      time = setInterval(function(){
+        $("p.moneyerror").fadeOut();
+      },2000)
+    }
+  })
+  //充值或者提现
+  $("button").on("click",function(){
+    var index = $(this).index()
+    $(this).addClass("active").siblings("button").removeClass("active");
+    switch(index){
+      case 4:
+      $(".payList").show();
+      $(".carryList").hide();
+      break;
+      case 5:
+      $(".carryList").show();
+      $(".payList").hide();
+      
+    }
+  })
+  
+  
+  </script>
+  </body>
+</html>

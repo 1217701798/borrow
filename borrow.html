@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/example.css"/>
+		<link rel="stylesheet" href="css/swiper-3.4.0.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="icon/iconfont.css" />
+		<!--新引入样式-->
+		<link rel="stylesheet" href="css/borrow.css" />
+		<script>
+			var _hmt = _hmt || [];
+				(function() {
+				  var hm = document.createElement("script");
+				  hm.src = "https://hm.baidu.com/hm.js?f97686593414f3bb49a24f748c29e714";
+				  var s = document.getElementsByTagName("script")[0]; 
+				  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+	</head>
+	<body>	
+		<!--header-->
+		<div id="base"></div>
+		<h2>全部预借单</h2>
+		<div class="catbox">
+		    <table id="cartTable">
+		        <thead>
+		        <tr>
+		            <th>
+		            	<label>
+		                	
+		            	</label>
+		            </th>
+		            <th>图书信息</th>
+		            <th>操作</th>
+		        </tr>
+		        </thead>
+		        <tbody>
+		   </table>
+			  <!-- 一个店铺 -->
+			  <div class="one-shop">
+			  	<!-- 店铺合计 -->
+			  	<div class="shop-total">
+			      <label for="">
+			        <input type="checkbox" class="goods-check ShopCheck">西湖骆家庄店</label>
+					<p style="display: none;">本店合计：￥<span class="shop-total-amount ShopTotal">0</span></p>
+			    </div>			   
+			    <!-- 一个商品 -->
+			    <div class="one-goods">
+			      <p><input type="checkbox" class="goods-check GoodsCheck"/><img src="http://lib.fhdream.com/ajup/uploads/1482748501918.jpg" alt="" /></p>
+			      <div>
+			      	<p>一生必读的经典：安徒生童话选:(彩图注音版)</p>
+			      	<p>所需押金：￥<span class="shop-total-amount GoodsPrice">20.00</span></p>
+			      	<p><span>*</span>取书时间:<del onclick="return false;"><input type="text" class="sang_Calender" /></del></p>
+			      </div>
+			      <del onclick="return false;"><p class="delete"><img src="img/del.png"/></p></del>
+			    </div>
+			    <!-- 一个失效商品 -->
+			    <div class="one-goods Invalid">
+			      <p><input type="checkbox" class="goods-check GoodsCheck" checked="checked"/><img src="http://lib.fhdream.com/ajup/uploads/1482748501918.jpg" alt="" /></p>
+			      <div>
+			      	<p>一生必读的经典：安徒生童话选:(彩图注音版)</p>
+			      	<p>所需押金：￥<span class="shop-total-amount GoodsPrice">20.00</span></p>
+			      	<p><span>*</span>取书时间:<del onclick="return false;"><input type="text" class="sang_Calender" /></del></p>
+			      	<p>该本图书已下架</p>
+			      	<a class="find">查找相同</a>
+			      </div>
+			      <del onclick="return false;"><p class="delete"><img src="img/del.png"/></p></del>
+			      <div class="InvalidGood">失效</div>
+			    </div>
+			    <!-- 一个商品 -->
+			    <div class="one-goods">
+			      <p><input type="checkbox" class="goods-check GoodsCheck"/><img src="http://lib.fhdream.com/ajup/uploads/1482748501918.jpg" alt="" /></p>
+			      <div>
+			      	<p>一生必读的经典：安徒生童话选:(彩图注音版)</p>
+			      	<p>所需押金：￥<span class="shop-total-amount GoodsPrice">20.00</span></p>
+			      	<p><span>*</span>取书时间:<del onclick="return false;"><input type="text" class="sang_Calender" /></del></p>
+			      </div>
+			      <del onclick="return false;"><p class="delete"><img src="img/del.png"/></p></del>
+			    </div>
+			    
+			    
+			  </div>
+			  <!-- 一个店铺 -->
+			  <div class="one-shop">
+			  	<!-- 店铺合计 -->
+			  	 <div class="shop-total">
+			      <label for="">
+					<p style="display: none;">本店合计：￥<span class="shop-total-amount ShopTotal">0</span></p>
+			        <input type="checkbox" class="goods-check ShopCheck">江干-下沙城店</label>
+			    </div>
+			    <!-- 一个商品 -->
+			    <div class="one-goods">
+			      <p><input type="checkbox" class="goods-check GoodsCheck"/><img src="http://lib.fhdream.com/ajup/uploads/1482748501918.jpg" alt="" /></p>
+			      <div>
+			      	<p>一生必读的经典：安徒生童话选:(彩图注音版)</p>
+			      	<p>所需押金：￥<span class="shop-total-amount GoodsPrice">20.00</span></p>
+			      	<p><span>*</span>取书时间:<del onclick="return false;"><input type="text" class="sang_Calender" /></del></p>
+			      </div>
+			      <del onclick="return false;"><p class="delete"><img src="img/del.png"/></p></del>
+			    </div>
+			    <!-- 一个商品 -->
+			    <div class="one-goods">
+			      <p><input type="checkbox" class="goods-check GoodsCheck"/><img src="http://lib.fhdream.com/ajup/uploads/1482748501918.jpg" alt="" /></p>
+			      <div>
+			      	<p>一生必读的经典：安徒生童话选:(彩图注音版)</p>
+			      	<p>所需押金：￥<span class="shop-total-amount GoodsPrice">20.00</span></p>
+			      	<p><span>*</span>取书时间:<del onclick="return false;"><input type="text" class="sang_Calender" /></del></p>
+			      </div>
+			      <del onclick="return false;"><p class="delete"><img src="img/del.png"/></p></del>
+			    </div>
+			     
+			   
+			  </div>
+			  <!-- 总计 -->		   
+		    <div class="all-total">
+			    <p>押金合计：￥<span class="shop-total-amount" id="AllTotal">0</span></p>
+				<p><input class="check-all check" type="checkbox"/>&nbsp;&nbsp;全选</p>
+				<p>数量<span class="totalnum"></span>本</p>
+				<button>一键预约</button>
+		    </div>
+		</div>
+		<!--footer-->
+		<!--点击删除时显示-->   
+        <div class="weui_dialog_confirm" id="dialog1" style="display: none;">
+            <div class="weui_mask"></div>
+            <div class="weui_dialog">
+                <div class="weui_dialog_hd"><strong class="weui_dialog_title">弹窗标题</strong></div>
+                <div class="weui_dialog_bd">自定义弹窗内容<br>...</div>
+                <div class="weui_dialog_ft">
+                    <a href="javascript:;" class="weui_btn_dialog default">取消</a>
+                    <a href="javascript:;" class="weui_btn_dialog primary">确定</a>
+                </div>
+            </div>
+        </div>
+              
+        <!--余额不足显示显示-->
+        <div class="money">
+        	<div>
+        		<h3>押金不足，请充值</h3>
+	        	<p>您当前借阅余额不足200元，去书店无法成功取到图书哦~</p>
+	        	<input type="button" value="到店充值" class="goshop"/>
+	        	<input type="button" value="立即充值" class="now"/>
+        	</div>       	
+        </div>
+		<!--预借成功是显示-->
+		<div class="successbox">
+			<div class="success">
+	        	<button>×</button>
+				<p>预借成功！</p>
+				<p>您钱包余额不足,<span>充值</span>后才能成功取到哦~</p>
+				<p>(请在预约时间内到对应书屋取书，逾期失效哦~)</p>
+			</div>
+		</div>
+		<!--预借失败-->
+		<div class="fail">
+			<div>
+				<h3>预借失败！</h3>
+				<p>检测到您暂未开通借阅服务，请开通后再进行借阅~</p>
+				<button class="cancel">取消</button>
+				<button class="sure">去开通</button>
+			</div>			
+		</div>
+		<!--借阅规则-->
+		<div class="rule">
+			<div class="rulebox">
+				<ul>
+					<li>借阅服务规则说明</li>
+					<li>1.筑梦书屋借阅服务开通后，您将享受线上预借图书，线下取书的借阅服务；</li>
+					<li>2.待您从筑梦书屋成功借到图书后，系统将自动从您账户中转出200元金额到借阅押金中，并进行冻结；</li>
+					<li>3.需保证账户借阅押金200元才可成功出借图书，否则将无法成功借阅；<li>
+					<li>4.为用户提供优质服务，筑梦书屋采用免费借阅形式，但借阅过程中一旦有逾期、丢失或损坏的现象，均采取扣除一定押金形式进行赔偿。</li>
+					<li>5.凤翮正道文化发展有限公司享有筑梦书屋借阅规则的最终解释权。</li>
+				</ul>
+				<form><input type="checkbox"/>已阅读以上规则</form>
+				<div class="btn"> 
+					<button class="no">暂不开通</button>
+					<button class="yes">确认开通</button>
+				</div>
+			</div>		
+		</div>
+		<!--成功开通-->
+		<div class="opensuccess">
+			<h3>您已成功开通借阅服务</h3>			
+			<p>请重新预借</p>
+		</div>
+		<!--充值页面-->
+		<div class="recharge">
+			<div>		
+				<h3>充值<span class="close">×</span></h3>
+				<p>账户余额200元以上可预借图书，请继续充值<b>197</b>元</p>
+				<p class="num">￥<span>197</span></p>
+				<a javascript:void(0)>更改充值金额</a>
+				<ul>
+					<li><img src="img/welogo.png"/>微信支付<input type="checkbox" /></li>
+					<li><img src="img/pay.png"/>支付宝<input type="checkbox" /></li>
+				</ul>
+				
+				<button class="suerpay">确定充值</button>
+				<div class="paytips">请选择充值方式</div>
+			</div>
+		</div>
+		<!--没有借书时显示-->
+		<div class="nobook">
+			<ul>
+				<li>● 固定押金</li>
+				<li>● 免费借阅</li>
+				<li>● 线下体验</li>
+			</ul>
+			<img src="img/no.png"/>
+			<p>总觉得缺少点什么，借书丰富自己吧</p>
+		</div>
+		<!--有效时间提示-->
+		<div class="fade" id="borrowOut">
+			<span>××××</span>已被借出
+		</div>
+		<!--已被借出提示-->
+		<div class="fade" id="validTime">
+			请选择<span>×</span>天内的有效时间
+		</div>
+		<!--选择预借图书提示-->
+		<div class="fade" id="selectBook">
+			请选择预借图书
+		</div>
+		<!--最多预借一本提示-->
+		<div class="fade" id="selectBook">
+			您最多只可预借一本图书
+		</div>
+		
+	<script src="js/zepto.min.js"></script>
+	<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/weui.min.js"></script>
+	<script src="js/example.js"></script>
+	<script src="js/swiper-3.4.0.min.js"></script>
+	<script src="js/date.js"></script>
+	<script src="js/alert.js"></script>
+	<script>
+	//加载公共头尾
+	$("#base").load("base.html",function(){
+		$(this).find("a").eq(2).addClass("weui-bar__item_on").siblings().removeClass("weui-bar__item_on")
+		
+	})
+	
+	//借书单是否为空
+		
+		if(!$(".catbox").find(".one-shop").length){
+			$(".nobook").show();
+			$(".catbox").hide()
+			$(".all-total").hide()
+		}else{
+			$(".nobook").hide()
+			$(".all-total").show()
+		}
+	//购物车逻辑
+	var checkALL = document.getElementsByClassName("check-all")[0];//全选按钮
+   	var checkList = document.getElementsByTagName("input")
+    checkALL.onclick = function () {
+    	flag=true;
+    	  for (var i = 0; i < checkList.length; i++) {
+            checkList[i].checked = this.checked;
+       }
+    	
+    	
+        TotalPrice();
+    };
+     // 点击商品按钮
+  $(".GoodsCheck").click(function() {
+    var goods = $(this).closest(".one-shop").find(".GoodsCheck"); //获取本店铺的所有商品
+    var goodsC = $(this).closest(".one-shop").find(".GoodsCheck:checked"); //获取本店铺所有被选中的商品
+    var Shops = $(this).closest(".one-shop").find(".ShopCheck"); //获取本店铺的全选按钮
+    
+    if (goods.length == goodsC.length) { //如果选中的商品等于所有商品
+      Shops.prop('checked', true); //店铺全选按钮被选中
+      if ($(".ShopCheck").length == $(".ShopCheck:checked").length) { //如果店铺被选中的数量等于所有店铺的数量
+        $(checkALL).prop('checked', true); //全选按钮被选中
+        TotalPrice();
+      } else {
+        $(checkALL).prop('checked', false); //else全选按钮不被选中
+
+        TotalPrice();
+      }
+    } else { //如果选中的商品不等于所有商品
+      Shops.prop('checked', false); //店铺全选按钮不被选中
+      $(checkALL).prop('checked', false); //全选按钮也不被选中
+      // 计算
+      TotalPrice();
+      // 计算
+    }
+  });
+  // 点击店铺按钮
+  $(".ShopCheck").change(function() {
+    if ($(this).prop("checked") == true) { //如果店铺按钮被选中
+      $(this).parents(".one-shop").find(".goods-check").prop('checked', true); //店铺内的所有商品按钮也被选中
+      if ($(".ShopCheck").length == $(".ShopCheck:checked").length) { //如果店铺被选中的数量等于所有店铺的数量
+        $(checkALL).prop('checked', true); //全选按钮被选中
+        TotalPrice();
+      } else {
+        $(checkALL).prop('checked', false); //else全选按钮不被选中
+        TotalPrice();
+      }
+    } else { //如果店铺按钮不被选中
+      $(this).parents(".one-shop").find(".goods-check").prop('checked', false); //店铺内的所有商品也不被全选
+      $(checkALL).prop('checked', false); //全选按钮也不被选中
+      TotalPrice();
+    }
+  });
+  function TotalPrice() {
+    var allprice = 0; //总价
+      var totalNum = 0
+    $(".one-shop").each(function() { //循环每个店铺
+      var oprice = 0; //店铺总价
+    
+      $(this).find(".GoodsCheck").each(function() { //循环店铺里面的商品
+        if ($(this).is(":checked")) { //如果该商品被选中
+          var num = 1; //得到商品的数量
+          var price = parseFloat($(this).parents(".one-goods").find(".GoodsPrice").text()).toFixed(2); //得到商品的单价
+          console.log(price)
+          var total = price * num; //计算单个商品的总价
+          oprice += total; //计算该店铺的总价
+          totalNum+=1;
+        }
+        $(this).closest(".one-shop").find(".ShopTotal").text(oprice.toFixed(2)); //显示被选中商品的店铺总价
+      	
+      });
+      var oneprice = parseFloat($(this).find(".ShopTotal").text()); //得到每个店铺的总价
+      allprice += oneprice; //计算所有店铺的总价
+      	$(".totalnum").text(totalNum)
+    });
+    	$("#AllTotal").text(allprice.toFixed(2)); //输出全部总价
+  }
+  	//删除
+	$(".delete").on("click",function(){
+		$(this).parents(".one-goods").remove();
+		
+	})
+	
+	//点击预借显示
+	$(".all-total").find("button").on("click",function(e){
+		e.stopPropagation()
+		$(".fail").fadeIn();
+		$(".fail").addClass("active")
+	})
+	
+	//取消
+	$(".cancel").on("click",function(e){
+		e.stopPropagation()
+		$(".fail").hide()
+	})
+	//点击开通
+	$(".sure").on("click",function(e){
+		e.stopPropagation()
+		$(".fail").hide();
+		$(".rule").show()
+	})
+	//点击已阅读
+	$("input").on("click",function(e){
+		e.stopPropagation()
+		if($("input[type='checkbox']:checked").length==1){
+			$(".yes").addClass("active")
+			$(".yes").on("click",function(e){
+				e.stopPropagation()
+				$(".rule").hide();
+				success()								
+			})					
+		}else{
+			$(".yes").removeClass("active")
+		}
+	})
+	//暂不开通
+	$(".no").on("click",function(e){
+		e.stopPropagation()
+		$(".rule").hide()
+	})
+	//到店充值或者立即充值
+	$(".goshop").on("click",function(e){
+		e.stopPropagation()
+		$(this).parents(".money").fadeOut()
+	})
+	$(".now").on("click",function(e){
+		e.stopPropagation()
+		$(this).parents(".money").fadeOut()
+		$(".recharge").show()
+	})
+	
+		//点击充值
+		$("button.pay").on("click",function(e){
+			e.stopPropagation()
+			$(".recharge").fadeIn();
+		})
+		//关闭充值
+		$(".recharge .close").on("click",function(e){
+			e.stopPropagation()
+			$(".recharge").hide();
+
+		})
+		//成功开通
+		function success(){
+			$(".opensuccess").show();
+			setInterval(function(){
+				$(".opensuccess").fadeOut();
+				
+			},2500)
+			setTimeout(function(){$(".money").show()},3000)
+							
+		}
+		
+		
+		//充值跳转判断
+		$("div.recharge").find("a").on("click",function(e){
+			e.stopPropagation()
+			clearInterval(time)
+			if($("div.recharge input:checked").length){
+				window.location="pay.html"
+			}else{
+				$("div.paytips").fadeIn();
+				var time = setInterval(function(){
+					$("div.paytips").fadeOut();
+				},2000)
+
+			}
+			
+			
+		})
+		//确定充值
+		$(".suerpay").on("click",function(e){
+			e.stopPropagation()
+			clearInterval(time)
+			if($("div.recharge input:checked").length){
+				 $(".recharge").hide();
+			}else{
+				$("div.paytips").fadeIn();
+				var time = setInterval(function(){
+					$("div.paytips").fadeOut();
+				},2000)
+			
+			}
+			
+		})
+		//点击空白区域关闭弹窗
+		
+		$(".fail").on("click",function(){
+			$(this).hide()
+		})
+		$(".recharge").on("click",function(){
+			$(this).hide()
+		})
+		$(".rule").on("click",function(){
+			$(this).hide()
+		})
+		$(".money").on("click",function(){
+			$(this).hide()
+		})
+		$(".successbox").on("click",function(){
+			$(this).hide()
+		})
+		
+		show(".successbox p")
+		$(".successbox button").on("click",function(){
+			$(this).parents(".successbox").hide()
+		})
+		show(".fail div");
+		show(".recharge div")
+		show(".rule div")
+		show(".money div")
+		function show(obj){
+			$(obj).on("click",function(e){
+				e.stopPropagation()
+				$(obj).parent().show()
+			})
+		}
+		//点击微信支付一行，input被选中
+		$(".recharge ul li").eq(0).on("click",function(e){
+			e.stopPropagation();
+			if($(this).hasClass("active")){
+				$(this).find("input").prop("checked",false);
+				$(this).removeClass("active")
+			}else{
+				$(this).find("input").prop("checked",true);
+				$(this).addClass("active")
+			}
+		})
+		delCheck()
+		//失效不选中
+		function delCheck(){
+			var list = $(".Invalid input[type='checkbox']")
+			list.each(function(index,ele){
+				$(ele).prop("checked",false)
+			})
+		}
+	</script>
+	</body>
+</html>

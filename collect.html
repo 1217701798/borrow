@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/example.css"/>
+		<link rel="stylesheet" href="css/swiper-3.4.0.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="icon/iconfont.css" />
+		<!--新引入样式-->
+		<link rel="stylesheet" href="css/my_preborrow.css" />
+		<script>
+			var _hmt = _hmt || [];
+				(function() {
+				  var hm = document.createElement("script");
+				  hm.src = "https://hm.baidu.com/hm.js?f97686593414f3bb49a24f748c29e714";
+				  var s = document.getElementsByTagName("script")[0]; 
+				  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+	</head>
+	<body>	
+		<!--header-->
+		<div id="base"></div>
+		<!--section-->
+		<div class="myborrow_content"><!--<input type="checkbox" class="check-all"/>全选<span>-->图书信息<!--</span>--></div>
+		 <div class="one-shop">
+			  	<!-- 店铺合计 -->
+			  	<div class="shop-total">
+			      <label for="">
+			        <input type="checkbox" class="goods-check ShopCheck">西湖骆家庄店</label>
+					<p style="display: none;">本店合计：￥<span class="shop-total-amount ShopTotal">0</span></p>
+			    </div>			   
+			    <!-- 一个商品 -->
+			    <div class="one-goods">
+			      <p><input type="checkbox" class="goods-check GoodsCheck"/><img src="http://lib.fhdream.com/ajup/uploads/1482748501918.jpg" alt="" /></p>
+			      <div>
+			      	<p>一生必读的经典：安徒生童话选(彩图注音版)</p>
+			      	<p class="fontnew">编/译者：<span></span></p>
+			      	<p class="fontnew">出版社：<span></span></p>
+			      	<p class="fontnew">定价：￥<span></span></p>
+			      	<p class="fontnew">书店位置：<span>西湖区</span></p>
+			      	<del onclick="return false;"><p class="delete" >取消收藏</p></del>
+			      </div>			      
+			    </div>
+			    <!-- 一个商品 -->
+			    <div class="one-goods">
+			      <p><input type="checkbox" class="goods-check GoodsCheck"/><img src="http://lib.fhdream.com/ajup/uploads/1482748501918.jpg" alt="" /></p>			    	
+			      <div>
+			      	<p>一生必读的经典：安徒生童话选(彩图注音版)</p>
+			      	<p class="fontnew">编/译者：<span></span></p>
+			      	<p class="fontnew">出版社：<span></span></p>
+			      	<p class="fontnew">定价：￥<span></span></p>
+			      	<p class="fontnew">书店位置：<span>西湖区</span></p>
+			      	<del onclick="return false;"><p class="delete" >取消收藏</p></del>
+			      </div>			      
+			    </div>			    			    
+		 </div>
+		 <!--没有收藏时显示-->
+		<div class="no">
+			<img src="img/box.png"/>
+			<p>暂无收藏信息</p>
+		</div>
+		<!--footer-->
+	<script src="js/zepto.min.js"></script>
+	<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/weui.min.js"></script>
+	<script src="js/swiper-3.4.0.min.js"></script>
+	<script type="text/javascript">	
+		//没有收藏时显示
+  		if($(".one-shop").length){
+			$(".no").hide()
+		}else{
+			$(".no").show()
+		}
+	
+	</script>
+	</body>
+</html>

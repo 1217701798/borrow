@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/example.css"/>
+		<link rel="stylesheet" href="css/swiper-3.4.0.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="icon/iconfont.css" />
+		<!--新引入样式-->
+		<link rel="stylesheet" href="css/forgetpass.css" />
+		<script>
+			var _hmt = _hmt || [];
+				(function() {
+				  var hm = document.createElement("script");
+				  hm.src = "https://hm.baidu.com/hm.js?f97686593414f3bb49a24f748c29e714";
+				  var s = document.getElementsByTagName("script")[0]; 
+				  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+	</head>
+	<body>	
+		<!--header-->
+		<div id="base"></div>
+		<!--section-->
+		<div id="forget_section">
+			<p>找回密码</p>
+			<div class="register_main">
+				<span>手机号</span><input type="text" placeholder="+86"/><b >您的手机号有误</b><br /><hr />
+				<span>验证码</span><input type="text" /><img src="img/code.png" alt="" class="code" /><hr />
+				<span>手机验证码</span><input type="text" /><button class="code">获取手机验证码 </button><hr />
+				<span>新密码</span><input type="text" placeholder="设置密码包括两种字符"/><b >密码强度：<span>低</span>/<span>中</span>/<span>高</span></b><br /><hr />
+				<span>确认密码</span><input type="text" placeholder="请再次输入密码"/><b >您的手机号已注册/有误</b><br /><hr />
+				
+			</div>
+			<a class="next" href="my.html">立即登录</a>
+		</div>
+		<!--footer-->
+		
+	
+	<script src="js/zepto.min.js"></script>
+	<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/weui.min.js"></script>
+	<script src="js/swiper-3.4.0.min.js"></script>
+	<script type="text/javascript">	
+		$("#base").load("base.html","header")
+	//手机号验证
+    	$("input[type=text]:nth-of-type(1)").on("blur",function(){
+
+    			var res = /^1[3|5|7|9]\d{9}$/;
+	    		var tel = $("input[type=text]:nth-of-type(1)").val();
+		    	if(!res.test(tel)){
+	    			$(this).next("b").show()
+	    		}else{
+	    			//验证码
+	    			$(".code").on("click",function(){
+    				var num = 60;
+    				var that = this
+    				var timer = setInterval(function(){
+	    			$(that).text(num+"秒")
+	    			$(that).css({"border":"1px solid #cdcdcd","color":"#cdcdcd"})
+	    			num--;
+	    			if(num<0){
+	    			$(that).text("重新发送")
+	    			clearInterval(timer)	
+    			}
+    		},1000)
+    		})
+	    		}
+    	})
+	   
+    	
+	</script>
+	</body>
+</html>

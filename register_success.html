@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/example.css"/>
+		<link rel="stylesheet" href="css/swiper-3.4.0.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="icon/iconfont.css" />
+		<!--新引入样式-->
+		<link rel="stylesheet" href="css/register_success.css" />
+		<script>
+			var _hmt = _hmt || [];
+				(function() {
+				  var hm = document.createElement("script");
+				  hm.src = "https://hm.baidu.com/hm.js?f97686593414f3bb49a24f748c29e714";
+				  var s = document.getElementsByTagName("script")[0]; 
+				  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+	</head>
+	<body>	
+		<!--header-->
+		<div id="base"></div>
+		<!--section-->
+		<div id="success_section">
+			<p>这里是昵称</p>
+			<p>恭喜您，注册成功！</p>
+			<a href="my.html">立即返回</a>
+			<p class="time"><span>10</span>秒后自动返回</p>
+		</div>
+		<!--footer-->
+		<div style="height:60px;width:100%"></div>
+        
+	
+	<script src="js/zepto.min.js"></script>
+	<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/weui.min.js"></script>
+	<script src="js/swiper-3.4.0.min.js"></script>
+	<script type="text/javascript">	
+	//加载公共头尾
+		$("#base").load("base.html",function(){
+		$(this).find("a").eq(3).addClass("weui-bar__item_on").siblings().removeClass("weui-bar__item_on")
+			
+		})
+	      	
+    	//倒计时关闭
+    	time()
+    	function time(){
+    		var num = $(".time").find("span").text()*1
+    		setInterval(function(){
+    			$(".time").find("span").text(num--);
+    			if(num==0){
+    				window.location.href ="my.html"
+    			}
+    		},1000)
+    	}
+    	
+    	
+	</script>
+	</body>
+</html>

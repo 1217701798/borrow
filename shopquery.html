@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/example.css"/>
+		<link rel="stylesheet" href="css/swiper-3.4.0.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="icon/iconfont.css" />
+		<!--新引入样式-->
+		<link rel="stylesheet" href="css/shopquery.css" />
+		<script>
+			var _hmt = _hmt || [];
+				(function() {
+				  var hm = document.createElement("script");
+				  hm.src = "https://hm.baidu.com/hm.js?f97686593414f3bb49a24f748c29e714";
+				  var s = document.getElementsByTagName("script")[0]; 
+				  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+	</head>
+	<body>
+		<div class="shopquery">
+			<header>杭州骆家庄店</header>
+			<!--轮播图-->
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="img/banner1.jpg"/></div>
+					<div class="swiper-slide"><img src="img/banner2.jpg"/></div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+			<div class="search">				
+				<p>杭州市</p>
+				<form action="">
+					<input type="text" placeholder="输入店铺名称或拼音直接查询"/>
+					<button></button>
+				</form>
+			</div>
+			<ul class="list">
+				<li>
+					<h2>杭州骆家庄店</h2>
+					<p>188812344321</p>
+					<p>西湖文二路骆家庄</p>
+				</li>
+				<li>
+					<h2>杭州骆家庄店</h2>
+					<p>188812344321</p>
+					<p>西湖文二路骆家庄</p>
+				</li>
+				<li>
+					<h2>杭州骆家庄店</h2>
+					<p>188812344321</p>
+					<p>西湖文二路骆家庄</p>
+				</li>
+				<li>
+					<h2>杭州骆家庄店</h2>
+					<p>188812344321</p>
+					<p>西湖文二路骆家庄西湖文二路骆家庄西湖文二路骆家庄</p>
+				</li>
+			</ul>
+		</div>
+		<div class="changecity">
+			<header><a javascript:void(0) class="back">×</a>已选择城市：<span>杭州</span></header>
+			<ul class="city">
+				<li class="active">杭州</li>
+				<li>北京</li>
+				<li>天津</li>
+				<li>上海</li>
+				<li>南京</li>
+				<li>武汉</li>
+				<li>呼和浩特市</li>
+			</ul>
+		</div>
+		<!--店铺不存在提示信息-->
+		<p class="noshop">此店铺不存在</p>
+	<script src="js/zepto.min.js"></script>
+	<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/weui.min.js"></script>
+	<script src="js/swiper-3.4.0.min.js"></script>
+	<script>
+		//初始化轮播图
+		   var swiper = new Swiper(".swiper-container",{
+			autoplay: 4000,
+			pagination : '.swiper-pagination',
+			loop:true
+		   })
+	   //搜索输入时按钮变色
+	 		$("input").on("focus",function(){
+				$(document).keydown(function(){
+				$("input").siblings("button").css({"backgroundColor":"#20a1f9"})    	 		
+	 			})
+	 		})
+		  $("input").on("blur",function(){
+			$(this).siblings("button").css({"backgroundColor":"#D6D5D5"})
+		 })
+		  //点击跳转
+		  $(".search p").on("click",function(){
+			$(".shopquery").hide()
+			$(".changecity").show()
+			$(".changecity").addClass("active")
+		  })
+		//点击返回
+		$(".back").on("click",function(){		
+			$(".shopquery").fadeIn();
+			$(".changecity").hide()
+		})
+		//切换城市
+		$(".city li").on("click",function(){
+			$(this).addClass("active").siblings().removeClass("active")
+			$("header").find("span").html($(this).html())
+		})
+		//店铺不存在显示消失
+//		setInterval(function(){
+//			$(".noshop").fadeOut()
+//		},2000)
+	</script>
+	</body>
+</html>

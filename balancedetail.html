@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>余额明细</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/example.css"/>
+		<link rel="stylesheet" href="css/swiper-3.4.0.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="icon/iconfont.css" />
+		<!--新引入样式-->
+		<link rel="stylesheet" href="css/balancedetail.css" />
+		<script>
+			var _hmt = _hmt || [];
+				(function() {
+				  var hm = document.createElement("script");
+				  hm.src = "https://hm.baidu.com/hm.js?f97686593414f3bb49a24f748c29e714";
+				  var s = document.getElementsByTagName("script")[0]; 
+				  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+	</head>
+	<body>	
+		<header>明细列表</header>
+		<ul class="list">
+			<!--押金冻结-->
+			<li class="cold">
+				<div>
+					<h3>押金冻结</h3>
+					<p>2017年2月22日  18:11</p>
+				</div>
+				<div>50.00元</div>
+			</li>
+			<!--押金解冻-->
+			<li class="thaw">
+				<div>
+					<h3>押金解冻</h3>
+					<p>2017年2月22日  18:11</p>
+				</div>
+				<div>50.00元</div>
+			</li>
+			<!--筑梦书屋充值-->
+			<li class="dream">
+				<div>
+					<h3>筑梦书屋线下账户充值</h3>
+					<p>2017年2月22日  18:11</p>
+				</div>
+				<div class="add">+50.00元</div>
+			</li>
+			<!--微信充值-->
+			<li class="we">
+				<div>
+					<h3>微信钱包充值</h3>
+					<p>2017年2月22日  18:11</p>
+				</div>
+				<div>50.00元</div>
+			</li>
+			<!--筑梦书屋消费-->
+			<li class="dream">
+				<div>
+					<h3>筑梦书屋线下账户充值</h3>
+					<p>2017年2月22日  18:11</p>
+				</div>
+				<div class="del">-50.00元</div>
+			</li>
+			<!--扣款-->
+			<li class="debit">
+				<div>
+					<h3>扣款金额</h3>
+					<p>2017年2月22日  18:11</p>
+				</div>
+				<div class="del">-50.00元</div>
+			</li>
+		</ul>
+		<!--没有数据时显示-->
+		<div class="nodata">
+			<img src="img/no.png"/>
+			<p>暂无明细记录</p>
+		</div>
+		<!--记载中显示-->
+		<div class="loading">加载中</div>
+		<!--加载完毕-->	
+		<div class="over">记载完毕</div>
+		
+	<script src="js/zepto.min.js"></script>
+	<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/weui.min.js"></script>
+	<script src="js/swiper-3.4.0.min.js"></script>
+	<script src="js/balancedetail.js"></script>
+	
+	</body>
+</html>

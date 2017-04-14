@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的余额</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/example.css"/>
+		<link rel="stylesheet" href="css/swiper-3.4.0.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="icon/iconfont.css" />
+		<!--新引入样式-->
+		<link rel="stylesheet" href="css/mybalance.css" />
+		<script>
+			var _hmt = _hmt || [];
+				(function() {
+				  var hm = document.createElement("script");
+				  hm.src = "https://hm.baidu.com/hm.js?f97686593414f3bb49a24f748c29e714";
+				  var s = document.getElementsByTagName("script")[0]; 
+				  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+	</head>
+	<body>	
+		<header><a href="balancedetail.html">明细</a></header>
+		<div class="box">
+			<img src="img/card.png" alt="" />
+			<p><span>200.00</span></p>
+			<!--未开通显示下面p标签内容-->
+			<p class="jy">借阅押金 <span>0</span> <a class="open" javascript:void(0)>开通借阅服务</a></p>
+			<!--已开通显示下面p标签内容-->
+			<p class="jy">借阅押金 <span>200</span> 元<a javascript:void(0)>已开通借阅服务</a></p>
+			<button class="pay">充 值</button>
+		</div>
+		<div class="rule">
+			<div class="rulebox">
+				<ul>
+					<li>借阅服务规则说明</li>
+					<li>1.筑梦书屋借阅服务开通后，您将享受线上预借图书，线下取书的借阅服务；</li>
+					<li>2.待您从筑梦书屋成功借到图书后，系统将自动从您账户中转出200元金额到借阅押金中，并进行冻结；</li>
+					<li>3.需保证账户借阅押金200元才可成功出借图书，否则将无法成功借阅；<li>
+					<li>4.为用户提供优质服务，筑梦书屋采用免费借阅形式，但借阅过程中一旦有逾期、丢失或损坏的现象，均采取扣除一定押金形式进行赔偿。</li>
+					<li>5.凤翮正道文化发展有限公司享有筑梦书屋借阅规则的最终解释权。</li>
+				</ul>
+				<form><input type="checkbox"/>已阅读以上规则</form>
+				<div class="btn"> 
+					<button class="no">暂不开通</button>
+					<button class="yes">确认开通</button>
+				</div>
+			</div>		
+		</div>
+		<!--充值之后是否开通提示-->
+		<div class="openlayer">			
+			<div>
+				<h3>充值成功！</h3>
+				<p>是否开通借阅服务？</p>
+				<button class="cancel">取消</button>
+				<button class="sure">确认</button>
+			</div>
+		</div>
+		<!--开通成功-->
+		<div class="success"><p>您已成功开通借阅服务！</p></div>		
+		<!--充值页面-->
+		<div class="recharge">
+			<div>		
+				<h2>充值<span class="close">×</span></h2>
+				<p>账户余额200元以上可预借图书，请继续充值<b>197</b>元</p>
+				<p class="num">￥<span>197</span></p>
+				<a javascript:void(0)>更改充值金额</a>
+				<ul>
+					<li><img src="img/welogo.png"/>微信支付<input type="checkbox" /></li>
+					<li><img src="img/pay.png"/>支付宝<input type="checkbox" /></li>
+				</ul>		
+				<button class="suerpay">确定充值</button>
+				<div class="paytips">请选择充值方式</div>
+			</div>
+		</div>
+		<!--借阅规则提示-->
+		<div class="tips"><h2>借阅规则</h2><p>需保证200元押金才可成功借出</p></div>
+		
+	<script src="js/zepto.min.js"></script>
+	<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/weui.min.js"></script>
+	<script src="js/swiper-3.4.0.min.js"></script>
+	<script>
+		
+		//未充值点击开通借阅服务
+		$(".open").on("click",function(e){
+			e.stopPropagation()
+			$(".rule").show()
+		})
+		//充值点击开通
+//		$(".open").on("click",function(){
+//			$(".openlayer").show();
+//			//点击确认
+//			$(".sure").on("click",function(){
+//				$(".openlayer").hide();
+//				success()
+//			})
+//			//点击取消
+//			$(".cancel").on("click",function(){
+//				$(".openlayer").hide()
+//			})
+//		})
+		//点击取消
+		$(".cancel").on("click",function(e){
+			e.stopPropagation()
+			$(".openlayer").hide();
+			$(".rule").removeClass("active")
+		})
+		//点击已阅读
+		$("input").on("click",function(e){
+			e.stopPropagation()
+			if($("input[type='checkbox']:checked").length==1){
+				$(".yes").addClass("active")
+				$(".yes").on("click",function(e){
+					e.stopPropagation()
+					$(".rule").hide()
+					success()								
+				})					
+			}else{
+				$(".yes").removeClass("active")
+			}
+		})
+		//暂不开通
+		$(".no").on("click",function(e){
+			e.stopPropagation()
+			$(".rule").hide()
+		})
+		//点击充值
+		$("button.pay").on("click",function(e){
+			e.stopPropagation()
+			$(".recharge").fadeIn();
+			$(".tips").hide()
+		})
+		//关闭充值
+		$(".close").on("click",function(e){
+			e.stopPropagation()
+			$(".recharge").hide()
+			$(".tips").show()
+			
+		})
+		//成功开通
+		function success(e){
+			e.stopPropagation()
+			$(".success").show();
+			$(".jy").eq(0).hide();
+			$(".jy").eq(1).show();
+			setInterval(function(){
+				$(".success").fadeOut()
+			},1000)					
+		}
+		//点击借阅规则提示
+		$(".tips").find("h2").on("click",function(e){
+			e.stopPropagation()
+			if($(this).hasClass("active")){	
+				$(this).siblings("p").hide();
+				$(".tips h2").removeClass("active")
+			}else{	
+				$(this).siblings("p").fadeIn();
+				$(this).addClass("active")				
+			}			
+		})
+		//充值跳转判断
+		$("div.recharge").find("a").on("click",function(e){
+			e.stopPropagation()
+			clearInterval(time)	
+			if($("div.recharge input:checked").length){
+				window.location="pay.html"
+			}else{
+				$("div.paytips").fadeIn();
+				var time = setInterval(function(){
+					$("div.paytips").fadeOut();
+				},2000);
+							
+			}
+			
+		})
+		//确定充值
+		$(".suerpay").on("click",function(e){
+			e.stopPropagation()
+			clearInterval(time)
+			if($("div.recharge input:checked").length){
+				 $(".recharge").hide();
+			}else{
+				$("div.paytips").fadeIn();
+				var time  = setInterval(function(){
+					$("div.paytips").fadeOut();
+				},2000);				
+			}
+			
+		})
+		//点击空白区域关闭弹窗
+		$(".recharge").on("click",function(){
+			$(this).hide()
+			$(".tips").show()
+		})
+		$(".rule").on("click",function(){
+			$(this).hide()		
+		})
+		show(".recharge div")
+		show(".rule div")
+		function show(obj){
+			$(obj).on("click",function(e){
+				e.stopPropagation()
+				$(obj).parent().show()
+			})
+		}
+		//点击微信支付一行，input被选中
+		$(".recharge ul li").eq(0).on("click",function(e){
+			e.stopPropagation();
+			if($(this).hasClass("active")){
+				$(this).find("input").prop("checked",false);
+				$(this).removeClass("active")
+			}else{
+				$(this).find("input").prop("checked",true);
+				$(this).addClass("active")
+			}
+		})
+	</script>
+	</body>
+</html>

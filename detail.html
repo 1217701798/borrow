@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/example.css"/>
+		<link rel="stylesheet" href="css/swiper-3.4.0.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<!--新引入样式-->
+		<link rel="stylesheet" type="text/css" href="css/detail.css"/>
+
+		<script>
+			var _hmt = _hmt || [];
+				(function() {
+				  var hm = document.createElement("script");
+				  hm.src = "https://hm.baidu.com/hm.js?f97686593414f3bb49a24f748c29e714";
+				  var s = document.getElementsByTagName("script")[0]; 
+				  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+	</head>
+	<body>	
+		<!--header-->
+		<div id="base"></div>
+		<!--search-->
+		<ul id="detail_search">
+			<li>筑梦书屋·骆家庄店</li>
+			<li><a href="">关注</a>|<a href="">我的记录</a></li>
+		</ul>		
+        <!--section-->
+        <div id="detail_section">
+			<h2>教育&gt;安徒生童话</h2>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><span></span><img src="http://lib.fhdream.com/ajup/uploads/1482724888614.jpg" alt="" /></div>
+					<div class="swiper-slide"><img src="http://lib.fhdream.com/ajup/uploads/1482724888614.jpg" alt="" /></div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+			
+			<ul class="top">
+				<li>安徒生童话（彩图注音版）</li>
+				<li>火热预借中</li>
+			</ul>
+			<div class="news">
+					<div>
+						<span>筑梦书屋·骆家庄店<i>▼</i><b>▲</b></span>
+						<ul>
+							<li>浙江省杭州市西湖区文一西路骆家庄文化家园</li>
+							<li>营业时间：周一到周五</li>
+						</ul>
+						<a href="tel:">
+							<input type="button" class="tel"/>
+						</a>
+					</div>
+					<p>书店位置<span>A书架三层103号</span></p>
+			</div>
+			<!--切换-->
+			<ul class="tab">
+				<li class="active">图书简介</li>
+				<li>出版信息</li>
+				<li>读者评价</li>
+			</ul>
+			<div class="tabview">
+				<!--图书简介-->
+				<div class="view">
+					<h3>内容简介</h3>
+					<p>入选2014中国好书，懂事之前读《小时代》，情动以后读张嘉佳，让人共鸣的情感故事。
+						150万次转发，超4亿次阅读，5个故事正在变成电影，每1分钟，
+						都有人在故事里看到自己。张嘉佳，微博上会写故事的人。入选2014中国好书，懂事之前读《小时代》，情动以后读张嘉佳，让人共鸣的情感故事。
+						150万次转发，超4亿次阅读，5个故事正在变成电影，每1分钟，
+						都有人在故事里看到自己。张嘉佳，微博上会写故事的人。											
+					<span>(展开)</span>
+					</p>					
+					<div>
+						<h3>目录</h3>
+						<ul>
+							<li>第一章</li>
+							<li>第二章</li>
+							<li>第三章</li>
+							<li>第四章</li>
+							<li>第五章</li>
+							<li>第六章</li>
+							<li>第七章</li>
+							<li>第八章</li>
+							<li>第九章</li>
+							<li>第十章</li>
+							<li>第十一章</li>
+							<li>第十二章</li>
+						</ul>
+					</div>
+					<!--返回顶部-->
+					<button class="gotop"><span>↑</span><br>顶部</button>
+				</div>
+				<!--出版信息-->
+				<div class="view">
+					<ul>
+						<li>编著:<span>[丹麦]安徒生</span></li>
+						<li>译者<span>禹田</span></li>
+						<li>出版社<span>北京教育出版社</span></li>
+						<li>ISBN<span>8888888</span></li>
+						<li>版次<span>1</span></li>
+						<li>包装<span>精装</span></li>
+						<li>开本<span>32</span></li>
+						<li>出版时间<span>2014-3-4</span></li>
+						<li>页数<span>560</span></li>
+						<li>定价<span>￥9</span></li>
+					</ul>
+				</div>
+				<!--读者评价-->
+				<div class="view">
+					<img src="img/develop.png" alt="" />
+					<p>暂无评价信息</p>
+				</div>
+			</div>
+			
+        </div>
+        <!--下架图书信息显示-->
+        <p class="off">该本图书已下架,试试购买哦</p>
+        <!--如果图书下架,下面ul添加class名no。-->
+        <ul id="borrow" class="no" >
+				<li><span><img src="img/4.png"/></span>收藏</li>
+				<li><span></span>&nbsp;&nbsp;购买</li>
+				<li>加入借书单</li>
+				<li><a href="borrow.html">立即预借</a></li>
+		</ul>
+		<!--拨打电话弹窗-->
+		<div class="telbox">
+			<div class="box">
+				<h3>提示</h3>
+				<p>是否拨打电话:<sapn>15545645464</sapn>?</p>
+				<div>
+					<button class="sure">确定</button>
+					<button class="cancel">取消</button>
+				</div>
+			</div>
+		</div>
+		<!--footer-->
+        
+	<script src="js/zepto.min.js"></script>
+	<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/weui.min.js"></script>
+	<script src="js/swiper-3.4.0.min.js"></script>
+	<script src="js/alert.js"></script>
+	<script type="text/javascript">
+	
+	//加载公共头尾
+		$("#base").load("base.html",function(){
+			$(this).find("header li:nth-of-type(2)").text("详情页")
+		})
+		
+    	//滚动    	
+    	var mySwiper = new Swiper('.swiper-container',{
+    		loop:false,
+    		autoplay:3000,
+    		pagination:".swiper-pagination",
+		})
+    	
+    	//点击收藏
+    	var flag = true;
+    	$("#borrow").find("li").eq(0).click(function(){
+    		if(flag){
+    			$(this).html("<span class='active'><img src='img/5.png'></span>收藏");
+    			flag = false;
+    		}else{
+    			$(this).html("<span><img src='img/4.png'></span>收藏");
+    			flag = true;
+    		}
+    		
+    	})
+    	 window.onload = function() {
+              isWeixinBrowser();
+          }
+        //判断是否微信浏览器
+        function isWeixinBrowser() {  
+            var ua = navigator.userAgent.toLowerCase();  
+            var result = (/micromessenger/.test(ua)) ? true : false;
+            if (result) {
+               console.log('你正在访问微信浏览器');
+            }
+            else {
+               console.log('你访问的不是微信浏览器');
+            }
+            return result;
+         } 
+         //排名皇冠显示
+         var a = $("ol").find("li:nth-last-of-type(1)").text()
+         //点击购买
+         var carFlag = true;
+         $("#borrow").find("li:nth-of-type(2)").click(function(){
+         	if(carFlag){
+         	$(this).find('span').css({" background":"url(img/car.png) center no-repeat","background-position":"0 -14px","background-size":"100%"})
+         		carFlag = false;
+         	}else{
+         	$(this).find('span').css({" background":"url(img/car.png) center no-repeat","background-position":"0 0","background-size":"100%"})
+         		carFlag = true;
+         	}
+
+         })
+         //是否好书推荐
+         if(localStorage.getItem("isTJ")==1){
+         	$("#detail_section .swiper-slide").find("span").show()
+         }else{
+         	$("#detail_section .swiper-slide").find("span").hide()
+         }
+         //是否借阅排行
+         if(localStorage.getItem("isNum")==1){
+         	$("#detail_section ol li").find("i").show()
+         }else{
+         	$("#detail_section ol li").find("i").hide()
+         }
+         //点击展开书店信息
+         $(".news span i").on("click",function(){
+         	$(this).parent().parent().addClass("active");
+         	$(".news ul").show()
+         })
+         //点击关闭书店信息
+         $(".news span b").on("click",function(){
+         	$(this).parent().parent().removeClass("active");
+         })
+        
+         //点击切换
+         $(".tab li").each(function(index,ele){
+         	
+         	$(ele).on("click",function(){
+
+         		$(this).addClass("active").siblings().removeClass("active")
+         		$(".tabview div.view").eq(index).show().siblings().hide();       		 
+         	})
+
+         })
+        //内容简介
+        var content = $(".view").eq(0).find("p").html().split("<")[0];
+        console.log()
+        if(	content.length<100){//小于100不显示展开
+        	$(".view").eq(0).find("p").html(content)
+        }else{
+       		$(".view").eq(0).find("p").html(content.substring(0,105)+"...<span>(展开)</span>") ;
+       		//点击展开内容
+	       	$(".view").eq(0).find("span").on("click",function(){    		
+	       		$(".view").eq(0).find("p").html(content) ;
+	       	})
+        }
+       	
+    	//滚动    	
+    	$(window).scroll(function(){
+    		if($(window).scrollTop()>100){
+    			$(".gotop").show()
+    			$(".gotop").on("click",function(){
+    				$(window).scrollTop(0)
+    			})
+    		}else{
+    			$(".gotop").hide()   			
+    		}
+    		
+    	})
+    	
+		
+	</script>
+	</body>
+</html>

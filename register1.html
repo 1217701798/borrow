@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/example.css"/>
+		<link rel="stylesheet" href="css/swiper-3.4.0.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="icon/iconfont.css" />
+		<!--新引入样式-->
+		<link rel="stylesheet" href="css/register.css" />
+		<script>
+			var _hmt = _hmt || [];
+				(function() {
+				  var hm = document.createElement("script");
+				  hm.src = "https://hm.baidu.com/hm.js?f97686593414f3bb49a24f748c29e714";
+				  var s = document.getElementsByTagName("script")[0]; 
+				  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+	</head>
+	<body>	
+		<!--header-->
+		<div id="base"></div>
+		<!--section-->
+		<div id="register_section">
+			<p>填写资料</p>
+			<div class="register_main">				
+				<span>手机号</span><input type="text" placeholder="+86"/><br /><hr />
+				<span><em>*</em>昵称</span><input type="text" placeholder="可包含中英文数字"/><b >昵称已存在/存在非法字符</b><hr />
+				<span><em>*</em>密码</span><input type="password" placeholder="建议使用至少两种字符组合"/><b >密码强度：<span>低</span></b><br /><hr />
+				<div>建议使用字母、数字和符号两种及以上的组合，8-20字符</div>
+				<span><em>*</em>确认密码</span><input type="password" placeholder="请再次输入密码"/><b ></b><br /><hr />
+				<span>邀请码</span>&nbsp;<input type="text" placeholder="请输入推荐人的邀请码" /><hr />
+				<i>登录后可享受更多优质服务</i>
+			</div>
+
+		</div>	
+			<a class="next" href="register_success.html">下一步</a>
+		
+		<!--footer-->
+
+       
+	
+	<script src="js/zepto.min.js"></script>
+	<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/weui.min.js"></script>
+	<script src="js/swiper-3.4.0.min.js"></script>
+	<script type="text/javascript">
+		$("#base").load("base.html",function(){
+			
+		})
+	
+	    //底部切换
+	    $(function(){
+	        $('.weui-tabbar__item').on('click', function () {
+	            $(this).addClass('weui-bar__item_on').siblings('.weui-bar__item_on').removeClass('weui-bar__item_on');
+	        });
+	    });    	
+    	//滚动    	
+    	$(window).scroll(function(){
+//  		console.log($(window).scrollTop())
+    		if($(window).scrollTop()>0){
+//  			alert(2)
+    			$(".select_nav").css({"position":"fixed","z-index":"100","background":"rgba(227,227,225,0.9)"})
+    		}else{
+    			$(".select_nav").css({"position":"relative"})
+    			
+    		}
+    	})
+    	//返回顶部
+    	$(window).scroll(function(){
+    		if($(window).scrollTop()>200){
+    			$(".gotop").show()
+    			$(".gotop").on("click",function(){
+    				$(window).scrollTop(0)
+    			})
+    		}else{
+    			$(".gotop").hide()   			
+    		}
+    	})
+    	$("#select_section").find("a").on("click",function(){
+    		$(this).addClass("active").parents("li").siblings().find("a").removeClass("active")
+    	})
+    	//输入密码时显示
+    	$("input[type='password']").eq(0).on("focus",function(){
+    		$(this).parent().find("div").show()
+    	})
+    		$("input[type='password']").eq(0).on("blur",function(){
+    		$(this).parent().find("div").hide()
+    	})
+    	
+	</script>
+	</body>
+</html>
